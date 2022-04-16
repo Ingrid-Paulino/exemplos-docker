@@ -1,1 +1,4 @@
 1- Nós não fazemos um container, e sim uma imagem que será executada em um container
+
+2- Docker-compose faz o docker run pra gente.
+  - se a imagem não existe ele ja builda pra gente

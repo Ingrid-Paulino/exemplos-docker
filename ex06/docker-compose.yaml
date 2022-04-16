@@ -1,13 +1,33 @@
 version: "3.0"
 services:
-  web1:
+  web1: #arquivo 1
     build:
       context: .
     ports:
       - "8001:3000"
-  web2:
+  web2: #arquivo 2
     build:
       context: .
       dockerfile: Dockerfile2
     ports:
       - "8002:3000"
+
+
+# Construção da imagem:
+#RODAR O COMANDO NO TERMINAL:
+  # docker-compose up -> executa todos
+  # docker-compose up web1 -> executa so esse serviço
+  
+  # acesse: localhost:8001
+  # acesse: localhost:8002
+
+  # entar dentro do web 1
+    # docker exec -it ex06 nomeDoContainerEXWeb1 sh
+      #apk add curl --> não vai funcionar pois eu troquei o usuario -- isso é uma forma de segurança, se eu nn tivesse trocado o usuario eu ia poder baixar coisas dentro do meu container.
+
+    # wget -O- http://localhost:3000 --> Responde html
+      # eu nn preciso usar localhost dentro do container posso usar web1
+        # wget -O- http://web1:3000
+        # wget -O- http://web2:3000 --> isso é comunicação dentro de containers
+
+        # docker-compose down -> remove tudo
