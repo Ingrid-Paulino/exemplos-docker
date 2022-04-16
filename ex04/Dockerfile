@@ -22,4 +22,4 @@ CMD ["thttpd", "-D", "-h", "0.0.0.0", "-p", "3000", "-d", "/home/static", "-u", 
   # docker build . -t ingridp/ex04 --> builda a imagem para a minha conta do dockerhub
     # ingridp: nome de usuário do dockerhub
   # docker push ingridp/ex04 --> manda a imagem para o dockerhub
-  # docker rin --rm -p 1234:3000 ingridp/ex04
+  # docker run --rm -p 1234:3000 ingridp/ex04
